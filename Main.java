@@ -375,9 +375,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
         System.out.println("Digite as notas dos alunos (-1 para sair):");
-
 
         double nota;
         int quantidadeAlunos = 0;
@@ -391,10 +389,9 @@ public class Main {
             if (nota == -1) {
                 break; 
             }
-
             quantidadeAlunos++;
             somaNotas += nota;
-
+            
             if (nota > maiorNota) {
                 maiorNota = nota;
             }
@@ -402,19 +399,15 @@ public class Main {
                 menorNota = nota;
             }
         }
-
-        
-        
         double  media = somaNotas / quantidadeAlunos;
-        
 
+    
+        scanner.close(); 
         
         System.out.println("Quantidade de alunos: " + quantidadeAlunos);
         System.out.println("Média da turma: " + media);
         System.out.println("Maior nota: " + (quantidadeAlunos > 0 ? maiorNota : "Nenhuma nota registrada"));
         System.out.println("Menor nota: " + (quantidadeAlunos > 0 ? menorNota : "Nenhuma nota registrada"));
-
-        scanner.close(); 
     }
 }
 
@@ -422,3 +415,40 @@ public class Main {
 /*15. Ler caracteres até que o usuário digite '.' (ponto). Ao final imprimir: a
 quantidade de vogais, a quantidade de dígitos e a quantidade dos
 demais caracteres.*/
+
+
+import java.util.Scanner;
+
+
+public class Main{
+    public static void main(String [] arg){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int vogais = 0;
+        int digitos = 0;
+        int outros = 0;
+
+        while(true){
+        
+        System.out.print("digite seu texto (aperte . para sair) :");
+        char c = scanner.next().charAt(0);
+
+        if(c == '.') { 
+        break ; }
+
+        if (c >= '0' && c <= '9') {
+            digitos++;
+        } else if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            vogais++;
+        } else {
+            outros++;
+        }
+        }
+
+        scanner.close();
+        System.out.println("quantidade de vogais : " + vogais);
+        System.out.println("a quantidade de dígitos : " + digitos);
+        System.out.println(" a quantidade dosdemais caracteres : " + outros);
+    }
+}
