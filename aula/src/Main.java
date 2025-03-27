@@ -33,5 +33,16 @@ public class Main {
        r2.dividir(4);
        r2.desenhar();
 
+        Circulo c1 = new Circulo(4 , 5 , 2);
+        Circulo c2 = new Circulo(10 , 6 , 2);
+        Circulo c3 = new Circulo(15 , 20 , 5);
+
+        c1.desenhar();
+        c1.mover(5,10);
+        c1.desenhar();
+        c2.dividir(4);
+        c3.redimencionar(10,10);
+
+        scanner.close();
     }
 }
