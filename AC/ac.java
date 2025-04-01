@@ -1,3 +1,4 @@
+package AC;
 // AC 10/03/2025
 
 /* 1. Leia duas variáveis inteiras e imprima a soma, subtração, multiplicação e
